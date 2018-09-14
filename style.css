@@ -1,0 +1,18 @@
+/* Fix SpaceX logo size*/
+body {
+	background: rgba(0,0,0,0.8);
+	margin: 0;
+	color: #fff;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.showcase::after {
+	content: '';
+	height: 100vh; /* All device 100% viewport height*/
+	width: 100%;
+	background-image: url(); /* Space image here*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: block;
+}
