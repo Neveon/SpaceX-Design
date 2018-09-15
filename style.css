@@ -41,17 +41,15 @@ body {
 	position: absolute;
 	z-index: 1;
 	top: 10%;
-	left: 30%;
-	margin-top: 105px;
-	margin-left: -205px;
-	width: 1250px;
-	height: 350px;
+	margin: auto;
+	width: 90vw;
+	height: 30vh;
 	text-align: center;
 	transition: all 1000s;
 }
 
 .content .logo {
-	margin-right: 10%;
+	margin-right: 10vw;
 	height : 180px;
 	width: 1080px;
 }
@@ -60,16 +58,17 @@ body {
 	text-shadow: 2px 2px 4px black;
 	width: 500px;
 	font-size: 1.5em;
-	margin-top: 30px;
-	margin-left: 25%;
+	margin:auto;
+	margin-right: 10vw;
 }
 
 .content .text {
 	text-shadow: 2px 2px 4px black;
 	width: 500px;
 	line-height: 1.7;
+	margin: auto;
 	margin-top: 1rem;
-	margin-left: 25%;
+	margin-right: 10vw;
 }
 
 .container {
@@ -112,4 +111,69 @@ footer {
 
 footer p {
 	margin: 0;
+}
+
+/* Link*/
+
+a:visited {
+	color:white;
+}
+
+a:hover {
+	color: blue;
+}
+
+a:active {
+	color:red;
+}
+
+/* Small Screens */
+@media(max-width: 560px) {
+	.showcase::after {
+		height: 60vh;
+	}
+
+	.content {
+		top: 5%;
+		margin-top: 5px;
+		width:100vw;
+	}
+
+	.content .logo {
+		margin-top:5%;
+		margin-left: 10vw;
+		width: 400px;
+		height: 100px
+	}
+
+	.content .title {
+		margin: auto;
+		margin-left: 10vw;
+	}
+
+	.content .text {
+		display: none;
+	}
+
+	.grid-3,
+	.grid-2 {
+		grid-template-columns: 1fr;
+	}
+
+	.services div {
+		border-bottom: #333 dashed 1px;
+		padding: 1.2rem 1rem;
+	}
+}
+
+/* Landscape */
+@media(max-height: 500px) {
+	.content .title,
+	.content .text {
+		display: none;
+	}
+
+	.content {
+		top:0;
+	}
 }
